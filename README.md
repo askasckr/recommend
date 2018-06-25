@@ -25,7 +25,7 @@ Not Included: Versioning, Endpoints to Investment Risk, Investment Category, App
 ### Testcases:
 --------------
 
-Testcases are included to test endpoints, services, validators and repositories concurrent clients, rebalancing, save predefined portfolios etc.
+Testcases are written for test endpoints, services, validators and repositories concurrent clients, rebalancing, save predefined portfolios etc.
 
 +![Imgur](https://github.com/askasckr/recommend/blob/master/TestCoverageScreenShot.png)
 +
