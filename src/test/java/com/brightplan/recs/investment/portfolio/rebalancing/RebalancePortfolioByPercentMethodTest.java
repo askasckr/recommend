@@ -5,6 +5,7 @@ import static org.hamcrest.Matchers.is;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
+import static org.springframework.util.StringUtils.isEmpty;
 
 import com.brightplan.recs.investment.category.InvestmentCategory;
 import com.brightplan.recs.investment.portfolio.predefined.PredefinedPortfolioPercent;
@@ -15,7 +16,10 @@ import com.google.common.collect.Lists;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
+import java.math.BigDecimal;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -51,6 +55,48 @@ public class RebalancePortfolioByPercentMethodTest {
     verify(predefinedPortfolioService).getPredefinedPortfolioPercents(1);
     assertThat(allocationsReturned.size(), is(equalTo(allocationsInput.size())));
     assertThat(allocationsReturned, is(equalTo(allocationsExpected)));
+    // Verify that all the diff amount is summingup to zero
+    assertThat(allocationsReturned.stream().mapToDouble(Allocation::getDiffAmount).sum(), is(equalTo(0.0)));
+    // Verify that all the excess amount is transferred
+    assertThat(allocationsReturned.stream().filter(a->a.getDiffAmountAfterTransfer() < -0.00000001).count(), is(equalTo(0L)));
+    // Calculate transfer money from text
+    double totalTransferMoney = allocationsReturned.stream().filter(a-> !isEmpty(a.getTransferDetail())).map(t->extractMoney(t)).mapToDouble(d->d).sum();
+    BigDecimal totalTransferMoney2Scale = new BigDecimal(totalTransferMoney).setScale(2, BigDecimal.ROUND_CEILING);
+    BigDecimal totalNegativeDiffAmount = new BigDecimal(allocationsInput.stream().filter(a->a.getDiffAmount() < 0).mapToDouble(Allocation::getDiffAmount).sum()).setScale(2,BigDecimal.ROUND_CEILING);
+    assertThat(totalNegativeDiffAmount.add(totalTransferMoney2Scale).doubleValue(), is(equalTo(0.00)));
+  }
+
+  private Double extractMoney(Allocation allocation) {
+    {
+      Double money =0.0;
+      for(String s: allocation.getTransferDetail().split(",")) {
+        money += transferMoney(s);
+      }
+      return money;
+    }
+  }
+  private Double transferMoney(String transferText) {
+    String re1="(Transfer)";	// Variable Name 1
+    String re2=".*?";	// Non-greedy match on filler
+    String re3="(\\$[0-9]+(?:\\.[0-9][0-9])?)(?![\\d])";	// Dollar Amount 1
+    String re4="(\\s+)";	// White Space 1
+    String re5="((((?:[a-z][a-z]+))(\\s+))+)";	// Word 1
+    //String re6="";	// White Space 2
+
+
+    Pattern p = Pattern.compile(re1+re2+re3+re4+re5,Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
+    Matcher m = p.matcher(transferText);
+    if (m.find())
+    {
+      String var1=m.group(1);
+      String dollars1=m.group(2);
+      String ws1=m.group(3);
+      String word1=m.group(4);
+      String ws2=m.group(5);
+      System.out.print("("+var1.toString()+")"+"("+dollars1.toString()+")"+"("+ws1.toString()+")"+"("+word1.toString()+")"+"("+ws2.toString()+")"+"\n");
+      return Double.valueOf(dollars1.substring(1));
+    }
+    return 0.0;
   }
 
   private List<PredefinedPortfolioPercent> stubGeneratePredefinedPortfolioPercentsForRiskId(
