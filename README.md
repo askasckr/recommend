@@ -59,7 +59,7 @@ java -Dspring.profiles.active=local -jar ./target/recs-0.0.1-SNAPSHOT.jar
 
 mvn spring-boot:run -Dspring-boot.run.profiles=local
 
-### Endpoints:
+### Endpoints: (for live api end points are avialable here https://intense-oasis-48244.herokuapp.com )
 ------------
 
 1. To get all the predefined portfolios as list:
