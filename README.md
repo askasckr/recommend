@@ -12,7 +12,7 @@ springboot 2.x
 Mockito
 SpringBootTest
 
-# Assumptions:
+### Assumptions:
 -----------------
 
 A new LOOKUP.INVESTMENT_CATEGORY or LOOKUP.INVESTMENT_RISK  record can be added to the database independent of the records RECOMMEND.PREDEFINED_PORTFOLIO  table, but a validation takes place during the updates or save into RECOMMEND.PREDEFINED_PORTFOLIO  table to make sure the percents sums up to 100.
@@ -22,22 +22,22 @@ Included: Features like audit fields, logging, Global Exception handler, RateLim
  
 Not Included: Versioning, Endpoints to Investment Risk, Investment Category, AppClient (I wish I'd included them too)
 
-# Testcases:
+### Testcases:
 --------------
 
 Testcases are included to test endpoints, services, validators and repositories concurrent clients, rebalancing, save predefined portfolios etc.
 
-
+![screenshot]https://github.com/askasckr/recommend/blob/master/TestCoverageScreenShot.png
 
 Here is the github repo: https://github.com/askasckr/recommend
 
-# Clone from it:
+### Clone from it:
 -----------------
 git clone https://github.com/askasckr/recommend
 
 git pull 
 
-# Build it and run tests:
+### Build it and run tests:
 --------------------------
 
 mvn clean install
@@ -50,14 +50,14 @@ Test Results:
 
 Note: A jar file gets created at ./target/recs-0.0.1-SNAPSHOT.jar
 
-# Run it:
+### Run it:
 -------
 
 java -Dspring.profiles.active=local -jar ./target/recs-0.0.1-SNAPSHOT.jar
 
 mvn spring-boot:run -Dspring-boot.run.profiles=local
 
-# Endpoints:
+### Endpoints:
 ------------
 
 1. To get all the predefined portfolios as list:
