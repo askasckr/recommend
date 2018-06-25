@@ -37,7 +37,7 @@ public class PredefinedPortfolioValidation {
           if (DOUBLE_100 != sumOfSuppliedPercents) {
             throw new RecsException(HttpStatus.BAD_REQUEST, String
                 .format(
-                    "Supplied Percents for Risk(id=%d, level=%d) ARE NOT summing up to 100: (%s) = %f",
+                    "Supplied Percents for Risk(id = %d, level = %d) ARE NOT summing up to 100: (%s) = %.2f",
                     r.getKey().getKey(), r.getKey().getValue(),
                     predefinedPortfolioPercents.stream().map(pp -> String.valueOf(pp.getPercent()))
                         .collect(joining(" + ")), sumOfSuppliedPercents));
@@ -54,7 +54,7 @@ public class PredefinedPortfolioValidation {
           if (DOUBLE_100 != sumOfMergedPercents) {
             throw new RecsException(HttpStatus.BAD_REQUEST, String
                 .format(
-                    "Merged Percents for Risk(id=%d, level=%d) ARE NOT summing up to 100: (%s) = %f",
+                    "Merged Percents for Risk(id = %d, level = %d) ARE NOT summing up to 100: (%s) = %.2f",
                     r.getKey().getKey(), r.getKey().getValue(),
                     predefinedPortfolioPercents.stream().map(pp -> String.valueOf(pp.getPercent()))
                         .collect(joining(" + ")), sumOfMergedPercents));

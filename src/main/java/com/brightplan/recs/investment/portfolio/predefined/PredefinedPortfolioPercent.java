@@ -1,6 +1,7 @@
 package com.brightplan.recs.investment.portfolio.predefined;
 
 import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toMap;
 
@@ -94,7 +95,9 @@ public class PredefinedPortfolioPercent extends RecsAuditableEntity {
   }
 
   private void merge(PredefinedPortfolioPercent predefinedPortfolioPercent) {
-    this.percent = predefinedPortfolioPercent.getPercent();
+    if(nonNull(predefinedPortfolioPercent)) {
+      this.percent = predefinedPortfolioPercent.getPercent();
+    }
   }
 
   public interface PredefinedPortfolioPercentEntityFieldValidation {
