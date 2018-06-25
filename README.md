@@ -57,27 +57,27 @@ mvn spring-boot:run -Dspring-boot.run.profiles=local
 
 # Endpoints:
 ------------
-####################################################
+
 1. To get all the predefined portfolios as list:
-####################################################
+
 
 curl -X GET \
   http://localhost:8080/api/v1/predefined/portfolios \
   -H 'Cache-Control: no-cache' \
   -H 'Client-Id: test'
 
-####################################################
+
 2. To get all the predefined portfolios as matrix/map:
-####################################################
+
 
 curl -X GET \
   http://localhost:8080/api/v1/predefined/portfolios/matrix \
   -H 'Cache-Control: no-cache' \
   -H 'Client-Id: test1'
 
-####################################################
+
 3. To save predefined portfolios:
-####################################################
+
 
 curl -X POST \
   http://localhost:8080/api/v1/predefined/portfolios \
@@ -207,9 +207,9 @@ curl -X POST \
         }
         ]'
 
-####################################################
+
 4. To rebalance the customer allocations using predefined portfolio:
-####################################################
+
 
 curl -X POST \
   http://localhost:8080/api/v1/predefined/portfolios/9/rebalanced \
