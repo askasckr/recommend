@@ -43,7 +43,7 @@ private List<?>[] getInvestmentRiskCategoryPercentMatrixSeed() {
 	return riskCategoryPercentMatrix;
 }
 ```
-Included: Features like ```audit fields, logging, Global Exception handler, RateLimiter, Restricting to up to 2 concurrent unique clients etc```
+Included: Features like ```Audit Fields, Logging, Global Exception Handler, RateLimiter, Restriction to allow up to 2 concurrent unique clients etc```
  
 Not Included: ```Versioning, Endpoints to Investment Risk, Investment Category, AppClient (I wish I'd included them too)```
 
