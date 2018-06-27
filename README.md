@@ -60,9 +60,11 @@ https://git.heroku.com/intense-oasis-48244.git
 
 ### Clone from it:
 -----------------
-```git clone https://github.com/askasckr/recommend
+```
+git clone https://github.com/askasckr/recommend
 
-git pull ```
+git pull 
+```
 
 ### Build it and run tests:
 --------------------------
