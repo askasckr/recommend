@@ -60,15 +60,15 @@ https://git.heroku.com/intense-oasis-48244.git
 
 ### Clone from it:
 -----------------
-git clone https://github.com/askasckr/recommend
+```git clone https://github.com/askasckr/recommend
 
-git pull 
+git pull ```
 
 ### Build it and run tests:
 --------------------------
-
+```
 mvn clean install
-
+```
 Test Results:
 
 [INFO] 
@@ -79,11 +79,11 @@ Note: A jar file gets created at ./target/recs-0.0.1-SNAPSHOT.jar
 
 ### Run it:
 -------
-
+```
 java -Dspring.profiles.active=local -jar ./target/recs-0.0.1-SNAPSHOT.jar
 
 mvn spring-boot:run -Dspring-boot.run.profiles=local
-
+```
 ### Endpoints: (for live api end points are avialable here https://intense-oasis-48244.herokuapp.com )
 ------------
 #### Note: All the requests expect Client-Id in header to distinguish the clients.
