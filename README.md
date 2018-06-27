@@ -56,7 +56,6 @@ Testcases are written for test endpoints, services, validators and repositories 
 +
 
 Here is the github repo: https://github.com/askasckr/recommend
-https://git.heroku.com/intense-oasis-48244.git
 
 ### Clone from it:
 -----------------
