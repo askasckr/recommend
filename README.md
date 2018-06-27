@@ -62,7 +62,7 @@ https://git.heroku.com/intense-oasis-48244.git
 -----------------
 ```
 git clone https://github.com/askasckr/recommend
-
+cd recommend
 git pull 
 ```
 
