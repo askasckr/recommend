@@ -17,7 +17,7 @@ SpringBootTest
 
 - A new ```LOOKUP.INVESTMENT_CATEGORY``` or ```LOOKUP.INVESTMENT_RISK```  record can be added to the database independent of the records ```RECOMMEND.PREDEFINED_PORTFOLIO```  table, but a validation takes place during the updates or save into ```RECOMMEND.PREDEFINED_PORTFOLIO```  table to make sure the percents sums up to 100.
 
-- **Rebalancing algorithm identifies max excess amount and max needed amount and start paying the max needed amount from max execss amount and then it goes on recursively till all excess amounts become zero.**
+- **Rebalancing algorithm identifies max excess amount and max needed amount and then starts paying the max needed amount from max execss amount and then it goes on recursively till all excess amounts become zero to find the transferable amounts between investment categories.**
 
 - All the requests expect ```Client-Id``` in header to distinguish the clients. More than two concurrent client requests result in ```HTTP status 429 Too Many Requests response status code```.
 
