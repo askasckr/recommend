@@ -87,7 +87,7 @@ mvn spring-boot:run -Dspring-boot.run.profiles=local
 ```
 ### Endpoints: (for live api end points are avialable here https://intense-oasis-48244.herokuapp.com )
 ------------
-#### Note: All the requests expect Client-Id in header to distinguish the clients and is used in ```RecsClientRateLimitInterceptor``` to control concurrent requests on two unique clients.
+#### Note: All the requests expect Client-Id in header to distinguish the clients and is used in ```RecsClientRateLimitInterceptor``` to control concurrent requests on two unique clients. More than two concurrent client requests result in HTTP 429 Too Many Requests response status code.
 
 #### 1. To get all the predefined portfolios as list(returns just a raw list of all predefined portfolio percents, UI might need to make group by on investmentRisk.id):
 
@@ -1641,6 +1641,7 @@ Response:
 ```
 
 #### 3. To save predefined portfolios:
+Note: Returns 400 Bad Request if the existing and/or given percents for a given investmentRisk.id exceeds 100.
 
 ```
 curl -X POST \
@@ -1774,6 +1775,10 @@ curl -X POST \
 
 #### 4. To rebalance the customer allocations using predefined portfolio:
 
+Note: Returns 404 Bad Request if one or more amounts are negative or sum is not positive number.
+
+http://localhost:8080/api/v1/predefined/portfolios/{investmentRiskId}/rebalanced 
+
 ```
 curl -X POST \
   http://localhost:8080/api/v1/predefined/portfolios/9/rebalanced \
@@ -1782,23 +1787,71 @@ curl -X POST \
   -d '[
 
 {
-	"investmentCategoryId": 1,
-	"amount": 65
-},
-{
 	"investmentCategoryId": 2,
 	"amount": 65
 },
 {
 	"investmentCategoryId": 3,
-	"amount": 567
+	"amount": 65
 },
 {
 	"investmentCategoryId": 4,
-	"amount": 1265
+	"amount": 567
 },
 {
 	"investmentCategoryId": 5,
+	"amount": 1265
+},
+{
+	"investmentCategoryId": 6,
 	"amount": 2465
 }
 ```
+Response:
+
+```
+[
+    {
+        "amount": 65,
+        "investmentCategoryId": 2,
+        "diffAmount": 156.35,
+        "transferDetail": "Transfer $156.35 from Foreign to Bonds",
+        "investmentCategoryName": "Bonds",
+        "percent": 5
+    },
+    {
+        "amount": 65,
+        "investmentCategoryId": 3,
+        "diffAmount": 599.05,
+        "transferDetail": "Transfer $597.15 from Small Cap to Large Cap, Transfer $1.90 from Foreign to Large Cap",
+        "investmentCategoryName": "Large Cap",
+        "percent": 15
+    },
+    {
+        "amount": 567,
+        "investmentCategoryId": 4,
+        "diffAmount": 1203.8,
+        "transferDetail": "Transfer $1203.80 from Small Cap to Mid Cap",
+        "investmentCategoryName": "Mid Cap",
+        "percent": 40
+    },
+    {
+        "amount": 1265,
+        "investmentCategoryId": 5,
+        "diffAmount": -158.25,
+        "transferDetail": null,
+        "investmentCategoryName": "Foreign",
+        "percent": 25
+    },
+    {
+        "amount": 2465,
+        "investmentCategoryId": 6,
+        "diffAmount": -1800.95,
+        "transferDetail": null,
+        "investmentCategoryName": "Small Cap",
+        "percent": 15
+    }
+]
+
+```
+
