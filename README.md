@@ -160,6 +160,8 @@ mvn spring-boot:run -Dspring-boot.run.profiles=local
 ```
 ### Endpoints: (live api end points are available here -> https://intense-oasis-48244.herokuapp.com )
 ------------
+Incorporated 4 api endpoints.(get all percents, get all percents matrix, save percents, rebalance amounts for given risk)
+
 **Note:** All the requests must contain ```Client-Id``` in header to distinguish the clients and is used in ```RecsClientRateLimitInterceptor``` to control concurrent requests on two unique clients. More than two concurrent valid unique client requests result in ```HTTP status 429 Too Many Requests response status code```.
 
 #### 1. To get all the predefined portfolios as list(returns just a raw list of all predefined portfolio percents, UI/Client might need to make group by on investmentRisk.id):
