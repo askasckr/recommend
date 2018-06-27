@@ -1,5 +1,5 @@
 # recommend
-A simple portfolio recommendation tool
+A simple portfolio recommendation tool ``` RecsApplication ```.
 
 The following libraries are used:
 ```
@@ -19,7 +19,7 @@ A new ```LOOKUP.INVESTMENT_CATEGORY``` or ```LOOKUP.INVESTMENT_RISK```  record c
 
 #### Note: All the requests expect Client-Id in header to distinguish the clients.
 
-The below seed data is populated at app startup:
+The below seed data is populated at app startup ``` SeedDataService ```:
 ```
 String[] investmentCategories = {"Bonds", "Large Cap", "Mid Cap", "Foreign", "Small Cap"};
 
