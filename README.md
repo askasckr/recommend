@@ -15,7 +15,7 @@ SpringBootTest
 ### Assumptions:
 -----------------
 
-A new LOOKUP.INVESTMENT_CATEGORY or LOOKUP.INVESTMENT_RISK  record can be added to the database independent of the records RECOMMEND.PREDEFINED_PORTFOLIO  table, but a validation takes place during the updates or save into RECOMMEND.PREDEFINED_PORTFOLIO  table to make sure the percents sums up to 100.
+A new ```LOOKUP.INVESTMENT_CATEGORY``` or ```LOOKUP.INVESTMENT_RISK```  record can be added to the database independent of the records ```RECOMMEND.PREDEFINED_PORTFOLIO```  table, but a validation takes place during the updates or save into ```RECOMMEND.PREDEFINED_PORTFOLIO```  table to make sure the percents sums up to 100.
 
 #### Note: All the requests expect Client-Id in header to distinguish the clients.
 
@@ -43,9 +43,9 @@ private List<?>[] getInvestmentRiskCategoryPercentMatrixSeed() {
 	return riskCategoryPercentMatrix;
 }
 ```
-Included: Features like audit fields, logging, Global Exception handler, RateLimiter, Restricting to up to 2 concurrent unique clients etc
+Included: Features like ```audit fields, logging, Global Exception handler, RateLimiter, Restricting to up to 2 concurrent unique clients etc```
  
-Not Included: Versioning, Endpoints to Investment Risk, Investment Category, AppClient (I wish I'd included them too)
+Not Included: ```Versioning, Endpoints to Investment Risk, Investment Category, AppClient (I wish I'd included them too)```
 
 ### Testcases:
 --------------
