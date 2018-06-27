@@ -1858,7 +1858,7 @@ curl -X POST \
 ```
 
 #### 4. To rebalance the customer allocations using predefined portfolio:
-**Note:** Returns 404 Bad Request if one or more amounts are negative or sum is not positive number.
+**Note:** Returns ```Http status 404 Bad Request``` if one or more amounts are negative or sum is not positive number.
 
 **Note:** Make sure to add ```Client-Id``` in header. More than two concurrent client requests result in ```HTTP status 429 Too Many Requests response status code```.
 
