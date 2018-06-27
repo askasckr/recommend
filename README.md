@@ -88,7 +88,7 @@ mvn spring-boot:run -Dspring-boot.run.profiles=local
 ```
 ### Endpoints: (for live api end points are avialable here https://intense-oasis-48244.herokuapp.com )
 ------------
-#### Note: All the requests expect Client-Id in header to distinguish the clients.
+#### Note: All the requests expect Client-Id in header to distinguish the clients and is used in ```RecsClientRateLimitInterceptor``` to control concurrent requests on two unique clients.
 
 #### 1. To get all the predefined portfolios as list:
 
