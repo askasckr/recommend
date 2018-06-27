@@ -90,7 +90,7 @@ mvn spring-boot:run -Dspring-boot.run.profiles=local
 ------------
 #### Note: All the requests expect Client-Id in header to distinguish the clients and is used in ```RecsClientRateLimitInterceptor``` to control concurrent requests on two unique clients.
 
-#### 1. To get all the predefined portfolios as list:
+#### 1. To get all the predefined portfolios as list(returns just a raw list of all predefined portfolio percents, UI might need to make group by on investmentRisk.id):
 
 ```
 curl -X GET \
@@ -99,7 +99,7 @@ curl -X GET \
   -H 'Client-Id: test'
 ```
 
-#### 2. To get all the predefined portfolios as matrix/map:
+#### 2. To get all the predefined portfolios as matrix/map (alternatively, this helps if UI prefers for an easy read):
 
 ```
 curl -X GET \
