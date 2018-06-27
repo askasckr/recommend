@@ -17,7 +17,7 @@ SpringBootTest
 
 - **Rebalancing algorithm (transfers amount from category with excess amount to category with needed amount) identifies max excess amount and max needed amount and then starts paying the max needed amount from max excess amount and then it goes on recursively till all excess amounts become zero to find the transferable amounts between investment categories.**
 
-- All the requests expect ```Client-Id``` in header to distinguish the clients. More than two concurrent client requests result in ```HTTP status 429 [Too Many Requests]```.
+- All the requests must contain ```Client-Id``` in header to distinguish the clients, otherwise empty response will be returned. More than two concurrent client requests result in ```HTTP status 429 [Too Many Requests]```.
 
 - The below **seed data** is populated at app startup (look at ``` SeedDataService ```):
 ```
