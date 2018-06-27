@@ -15,11 +15,13 @@ SpringBootTest
 ### Assumptions:
 -----------------
 
-A new ```LOOKUP.INVESTMENT_CATEGORY``` or ```LOOKUP.INVESTMENT_RISK```  record can be added to the database independent of the records ```RECOMMEND.PREDEFINED_PORTFOLIO```  table, but a validation takes place during the updates or save into ```RECOMMEND.PREDEFINED_PORTFOLIO```  table to make sure the percents sums up to 100.
+- A new ```LOOKUP.INVESTMENT_CATEGORY``` or ```LOOKUP.INVESTMENT_RISK```  record can be added to the database independent of the records ```RECOMMEND.PREDEFINED_PORTFOLIO```  table, but a validation takes place during the updates or save into ```RECOMMEND.PREDEFINED_PORTFOLIO```  table to make sure the percents sums up to 100.
 
-**Note:** All the requests expect ```Client-Id``` in header to distinguish the clients. More than two concurrent client requests result in ```HTTP status 429 Too Many Requests response status code```.
+- **Rebalancing algorithm identifies max excess amount and max needed amount and start paying the max needed amount from max execss amount and then it goes on recursively till all excess amounts become zero.**
 
-The below **seed data** is populated at app startup (look at ``` SeedDataService ```):
+- All the requests expect ```Client-Id``` in header to distinguish the clients. More than two concurrent client requests result in ```HTTP status 429 Too Many Requests response status code```.
+
+- The below **seed data** is populated at app startup (look at ``` SeedDataService ```):
 ```
 String[] investmentCategories = {"Bonds", "Large Cap", "Mid Cap", "Foreign", "Small Cap"};
 
@@ -44,7 +46,7 @@ private List<?>[] getInvestmentRiskCategoryPercentMatrixSeed() {
 }
 ```
 
-**DB Schema** looks like below:
+- **DB Schema** looks like below:
 ```
     create schema lookup;
     create schema recommend;
