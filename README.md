@@ -17,7 +17,7 @@ SpringBootTest
 
 A new ```LOOKUP.INVESTMENT_CATEGORY``` or ```LOOKUP.INVESTMENT_RISK```  record can be added to the database independent of the records ```RECOMMEND.PREDEFINED_PORTFOLIO```  table, but a validation takes place during the updates or save into ```RECOMMEND.PREDEFINED_PORTFOLIO```  table to make sure the percents sums up to 100.
 
-#### Note: All the requests expect Client-Id in header to distinguish the clients. More than two concurrent client requests result in HTTP 429 Too Many Requests response status code.
+**Note:** All the requests expect Client-Id in header to distinguish the clients. More than two concurrent client requests result in HTTP 429 Too Many Requests response status code.
 
 The below seed data is populated at app startup (look at ``` SeedDataService ```):
 ```
