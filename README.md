@@ -4,7 +4,7 @@ A simple portfolio recommendation tool ``` RecsApplication ```.
 The following libraries are used:
 ```
 h2 embedded database
-project lombak
+project lombok
 guava libs (RateLimiter)
 apache commons
 hibernate
