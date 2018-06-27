@@ -117,7 +117,7 @@ private List<?>[] getInvestmentRiskCategoryPercentMatrixSeed() {
 
 **Included:** ```Audit Fields, Logging, Global Exception Handler, RateLimiter, Restriction check to allow up to 2 concurrent unique clients etc```
  
-**Not Included:** ```Swagger api docs, Entity Versioning, Endpoints to Investment Risk & Investment Category & AppClient (I wish I'd included them too)```
+**Not Included:** ```Swagger api docs, Entity Versioning, Endpoints to update/save Investment Risk & Investment Category & AppClient (I wish I'd included them too)```
 
 ### Testcases:
 --------------
