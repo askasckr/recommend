@@ -162,7 +162,7 @@ mvn spring-boot:run -Dspring-boot.run.profiles=local
 **Note:** All the requests expect ```Client-Id``` in header to distinguish the clients and is used in ```RecsClientRateLimitInterceptor``` to control concurrent requests on two unique clients. More than two concurrent client requests result in ```HTTP status 429 Too Many Requests response status code```.
 
 #### 1. To get all the predefined portfolios as list(returns just a raw list of all predefined portfolio percents, UI might need to make group by on investmentRisk.id):
-**Note:** Make sure to add ```Client-Id``` in header. More than two concurrent client requests result in ```HTTP status 429 Too Many Requests response status code```.
+**Note:** Make sure to add ```Client-Id``` in header. More than two concurrent client requests result in ```HTTP status 429 [Too Many Requests]```.
 
 GET https://intense-oasis-48244.herokuapp.com/api/v1/predefined/portfolios
 
@@ -932,7 +932,7 @@ Response:
 ```
 
 #### 2. To get all the predefined portfolios as matrix/map (alternatively, this helps if UI prefers for an easy read):
-**Note:** Make sure to add ```Client-Id``` in header. More than two concurrent client requests result in ```HTTP status 429 Too Many Requests response status code```.
+**Note:** Make sure to add ```Client-Id``` in header. More than two concurrent client requests result in ```HTTP status 429 [Too Many Requests] ```.
 
 GET https://intense-oasis-48244.herokuapp.com/api/v1/predefined/portfolios/matrix
 
@@ -1723,7 +1723,7 @@ Response:
 #### 3. To save predefined portfolios:
 **Note:** Returns 400 Bad Request if the existing and/or given percents for a given investmentRisk.id exceeds 100.
 
-**Note:** Make sure to add ```Client-Id``` in header. More than two concurrent client requests result in ```HTTP status 429 Too Many Requests response status code```.
+**Note:** Make sure to add ```Client-Id``` in header. More than two concurrent client requests result in ```HTTP status 429 [Too Many Requests] ```.
 
 POST https://intense-oasis-48244.herokuapp.com/api/v1/predefined/portfolios
 
@@ -1861,7 +1861,7 @@ curl -X POST \
 #### 4. To rebalance the customer allocations using predefined portfolio:
 **Note:** Returns ```Http status 404 Bad Request``` if one or more amounts are negative or sum is not positive number.
 
-**Note:** Make sure to add ```Client-Id``` in header. More than two concurrent client requests result in ```HTTP status 429 Too Many Requests response status code```.
+**Note:** Make sure to add ```Client-Id``` in header. More than two concurrent client requests result in ```HTTP status 429 [Too Many Requests] ```.
 
 POST https://intense-oasis-48244.herokuapp.com/api/v1/predefined/portfolios/{investmentRiskId}/rebalanced
 
