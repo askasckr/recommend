@@ -2,7 +2,7 @@
 A simple portfolio recommendation tool
 
 The following libraries are used:
-
+```
 h2 embedded database
 project lombak
 guava libs (RateLimiter)
@@ -11,7 +11,7 @@ hibernate
 springboot 2.x
 Mockito
 SpringBootTest
-
+```
 ### Assumptions:
 -----------------
 
@@ -20,7 +20,7 @@ A new LOOKUP.INVESTMENT_CATEGORY or LOOKUP.INVESTMENT_RISK  record can be added 
 #### Note: All the requests expect Client-Id in header to distinguish the clients.
 
 The below seed data is populated at app startup:
-
+```
 String[] investmentCategories = {"Bonds", "Large Cap", "Mid Cap", "Foreign", "Small Cap"};
 
 List<Integer> InvesmentRiskLevelSeed() {
@@ -42,7 +42,7 @@ private List<?>[] getInvestmentRiskCategoryPercentMatrixSeed() {
 	};
 	return riskCategoryPercentMatrix;
 }
-
+```
 Included: Features like audit fields, logging, Global Exception handler, RateLimiter, Restricting to up to 2 concurrent unique clients etc
  
 Not Included: Versioning, Endpoints to Investment Risk, Investment Category, AppClient (I wish I'd included them too)
@@ -88,27 +88,27 @@ mvn spring-boot:run -Dspring-boot.run.profiles=local
 ------------
 #### Note: All the requests expect Client-Id in header to distinguish the clients.
 
-1. To get all the predefined portfolios as list:
+#### 1. To get all the predefined portfolios as list:
 
-
+```
 curl -X GET \
   http://localhost:8080/api/v1/predefined/portfolios \
   -H 'Cache-Control: no-cache' \
   -H 'Client-Id: test'
+```
 
+#### 2. To get all the predefined portfolios as matrix/map:
 
-2. To get all the predefined portfolios as matrix/map:
-
-
+```
 curl -X GET \
   http://localhost:8080/api/v1/predefined/portfolios/matrix \
   -H 'Cache-Control: no-cache' \
   -H 'Client-Id: test1'
+```
 
+#### 3. To save predefined portfolios:
 
-3. To save predefined portfolios:
-
-
+```
 curl -X POST \
   http://localhost:8080/api/v1/predefined/portfolios \
   -H 'Cache-Control: no-cache' \
@@ -236,11 +236,11 @@ curl -X POST \
             "percent": 15
         }
         ]'
+```
 
+#### 4. To rebalance the customer allocations using predefined portfolio:
 
-4. To rebalance the customer allocations using predefined portfolio:
-
-
+```
 curl -X POST \
   http://localhost:8080/api/v1/predefined/portfolios/9/rebalanced \
   -H 'Cache-Control: no-cache' \
@@ -267,3 +267,4 @@ curl -X POST \
 	"investmentCategoryId": 5,
 	"amount": 2465
 }
+```
