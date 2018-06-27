@@ -19,7 +19,7 @@ A new ```LOOKUP.INVESTMENT_CATEGORY``` or ```LOOKUP.INVESTMENT_RISK```  record c
 
 **Note:** All the requests expect Client-Id in header to distinguish the clients. More than two concurrent client requests result in HTTP 429 Too Many Requests response status code.
 
-The below seed data is populated at app startup (look at ``` SeedDataService ```):
+The below **seed data** is populated at app startup (look at ``` SeedDataService ```):
 ```
 String[] investmentCategories = {"Bonds", "Large Cap", "Mid Cap", "Foreign", "Small Cap"};
 
@@ -44,7 +44,7 @@ private List<?>[] getInvestmentRiskCategoryPercentMatrixSeed() {
 }
 ```
 
-DB Schema looks like below:
+**DB Schema** looks like below:
 ```
     create schema lookup;
     create schema recommend;
@@ -112,9 +112,9 @@ DB Schema looks like below:
 
 ```
 
-Included: Features like ```Audit Fields, Logging, Global Exception Handler, RateLimiter, Restriction to allow up to 2 concurrent unique clients etc```
+**Included:** Features like ```Audit Fields, Logging, Global Exception Handler, RateLimiter, Restriction to allow up to 2 concurrent unique clients etc```
  
-Not Included: ```Versioning, Endpoints to Investment Risk & Investment Category & AppClient (I wish I'd included them too)```
+**Not Included:** ```Versioning, Endpoints to Investment Risk & Investment Category & AppClient (I wish I'd included them too)```
 
 ### Testcases:
 --------------
