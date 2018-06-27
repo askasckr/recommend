@@ -122,7 +122,7 @@ private List<?>[] getInvestmentRiskCategoryPercentMatrixSeed() {
 
 ### Api documentation:
 ---------------------
-Access the Swagger Api Doc from the url below:
+Swagger Api Doc can be accessed from the url below:
 
 https://intense-oasis-48244.herokuapp.com/swagger-ui.html
 
