@@ -27,7 +27,7 @@ String[] investmentCategories = {"Bonds", "Large Cap", "Mid Cap", "Foreign", "Sm
 List<Integer> InvesmentRiskLevelSeed() {
     return Stream.iterate(1, n -> n + 1).limit(10).collect(toList());
 }
-//category vs risk percent values
+//Category vs Risk percent values
 private List<?>[] getInvestmentRiskCategoryPercentMatrixSeed() {
 	List<?>[] riskCategoryPercentMatrix = {
 		Arrays.asList(80, 20, 0, 0, 0),
