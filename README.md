@@ -15,7 +15,7 @@ SpringBootTest
 ### Assumptions:
 -----------------
 
-- **Rebalancing algorithm identifies max excess amount and max needed amount and then starts paying the max needed amount from max execss amount and then it goes on recursively till all excess amounts become zero to find the transferable amounts between investment categories.**
+- **Rebalancing algorithm identifies max excess amount and max needed amount and then starts paying the max needed amount from max excess amount and then it goes on recursively till all excess amounts become zero to find the transferable amounts between investment categories.**
 
 - All the requests expect ```Client-Id``` in header to distinguish the clients. More than two concurrent client requests result in ```HTTP status 429 [Too Many Requests]```.
 
