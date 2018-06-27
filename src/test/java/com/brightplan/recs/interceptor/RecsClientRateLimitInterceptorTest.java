@@ -49,10 +49,22 @@ public class RecsClientRateLimitInterceptorTest {
       throws ExecutionException, InterruptedException {
 
     List<String> clients = Stream
-        .iterate(1, n -> n + 1).limit(4).map(i -> {
+        .iterate(1, n -> n + 1).limit(5).map(i -> {
           // This is to send multiple client requests for multiple times
           List<String> multipleClients = Lists
               .newArrayList();
+          multipleClients.add("client1");
+          multipleClients.add("client2");
+          multipleClients.add("client3");
+          multipleClients.add("client2");
+          multipleClients.add("client3");
+          multipleClients.add("client1");
+          multipleClients.add("client2");
+          multipleClients.add("client3");
+          multipleClients.add("client2");
+          multipleClients.add("client1");
+          multipleClients.add("client2");
+          multipleClients.add("client3");
           multipleClients.add("client1");
           multipleClients.add("client2");
           multipleClients.add("client3");

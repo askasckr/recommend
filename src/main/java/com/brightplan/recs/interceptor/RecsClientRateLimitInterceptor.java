@@ -62,6 +62,10 @@ public class RecsClientRateLimitInterceptor implements HandlerInterceptor {
       return true;
     }
 
+    if (!request.getRequestURI().startsWith("/api")) {
+      return true;
+    }
+
     String clientId = request.getHeader(CLIENT_ID);
     // let non-API requests not pass
     if (clientId == null) {
