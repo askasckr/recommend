@@ -97,6 +97,763 @@ curl -X GET \
   -H 'Cache-Control: no-cache' \
   -H 'Client-Id: test'
 ```
+Response:
+
+```
+[
+    {
+        "id": 1,
+        "investmentCategory": {
+            "id": 2,
+            "name": "Bonds",
+            "displayOrder": 0,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 1,
+            "level": 1,
+            "info": null
+        },
+        "percent": 80
+    },
+    {
+        "id": 2,
+        "investmentCategory": {
+            "id": 3,
+            "name": "Large Cap",
+            "displayOrder": 1,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 1,
+            "level": 1,
+            "info": null
+        },
+        "percent": 20
+    },
+    {
+        "id": 3,
+        "investmentCategory": {
+            "id": 4,
+            "name": "Mid Cap",
+            "displayOrder": 2,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 1,
+            "level": 1,
+            "info": null
+        },
+        "percent": 0
+    },
+    {
+        "id": 4,
+        "investmentCategory": {
+            "id": 5,
+            "name": "Foreign",
+            "displayOrder": 3,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 1,
+            "level": 1,
+            "info": null
+        },
+        "percent": 0
+    },
+    {
+        "id": 5,
+        "investmentCategory": {
+            "id": 6,
+            "name": "Small Cap",
+            "displayOrder": 4,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 1,
+            "level": 1,
+            "info": null
+        },
+        "percent": 0
+    },
+    {
+        "id": 6,
+        "investmentCategory": {
+            "id": 2,
+            "name": "Bonds",
+            "displayOrder": 0,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 2,
+            "level": 2,
+            "info": null
+        },
+        "percent": 70
+    },
+    {
+        "id": 7,
+        "investmentCategory": {
+            "id": 3,
+            "name": "Large Cap",
+            "displayOrder": 1,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 2,
+            "level": 2,
+            "info": null
+        },
+        "percent": 15
+    },
+    {
+        "id": 8,
+        "investmentCategory": {
+            "id": 4,
+            "name": "Mid Cap",
+            "displayOrder": 2,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 2,
+            "level": 2,
+            "info": null
+        },
+        "percent": 15
+    },
+    {
+        "id": 9,
+        "investmentCategory": {
+            "id": 5,
+            "name": "Foreign",
+            "displayOrder": 3,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 2,
+            "level": 2,
+            "info": null
+        },
+        "percent": 0
+    },
+    {
+        "id": 10,
+        "investmentCategory": {
+            "id": 6,
+            "name": "Small Cap",
+            "displayOrder": 4,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 2,
+            "level": 2,
+            "info": null
+        },
+        "percent": 0
+    },
+    {
+        "id": 11,
+        "investmentCategory": {
+            "id": 2,
+            "name": "Bonds",
+            "displayOrder": 0,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 3,
+            "level": 3,
+            "info": null
+        },
+        "percent": 60
+    },
+    {
+        "id": 12,
+        "investmentCategory": {
+            "id": 3,
+            "name": "Large Cap",
+            "displayOrder": 1,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 3,
+            "level": 3,
+            "info": null
+        },
+        "percent": 15
+    },
+    {
+        "id": 13,
+        "investmentCategory": {
+            "id": 4,
+            "name": "Mid Cap",
+            "displayOrder": 2,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 3,
+            "level": 3,
+            "info": null
+        },
+        "percent": 15
+    },
+    {
+        "id": 14,
+        "investmentCategory": {
+            "id": 5,
+            "name": "Foreign",
+            "displayOrder": 3,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 3,
+            "level": 3,
+            "info": null
+        },
+        "percent": 10
+    },
+    {
+        "id": 15,
+        "investmentCategory": {
+            "id": 6,
+            "name": "Small Cap",
+            "displayOrder": 4,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 3,
+            "level": 3,
+            "info": null
+        },
+        "percent": 0
+    },
+    {
+        "id": 16,
+        "investmentCategory": {
+            "id": 2,
+            "name": "Bonds",
+            "displayOrder": 0,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 4,
+            "level": 4,
+            "info": null
+        },
+        "percent": 50
+    },
+    {
+        "id": 17,
+        "investmentCategory": {
+            "id": 3,
+            "name": "Large Cap",
+            "displayOrder": 1,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 4,
+            "level": 4,
+            "info": null
+        },
+        "percent": 20
+    },
+    {
+        "id": 18,
+        "investmentCategory": {
+            "id": 4,
+            "name": "Mid Cap",
+            "displayOrder": 2,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 4,
+            "level": 4,
+            "info": null
+        },
+        "percent": 20
+    },
+    {
+        "id": 19,
+        "investmentCategory": {
+            "id": 5,
+            "name": "Foreign",
+            "displayOrder": 3,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 4,
+            "level": 4,
+            "info": null
+        },
+        "percent": 10
+    },
+    {
+        "id": 20,
+        "investmentCategory": {
+            "id": 6,
+            "name": "Small Cap",
+            "displayOrder": 4,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 4,
+            "level": 4,
+            "info": null
+        },
+        "percent": 0
+    },
+    {
+        "id": 21,
+        "investmentCategory": {
+            "id": 2,
+            "name": "Bonds",
+            "displayOrder": 0,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 5,
+            "level": 5,
+            "info": null
+        },
+        "percent": 40
+    },
+    {
+        "id": 22,
+        "investmentCategory": {
+            "id": 3,
+            "name": "Large Cap",
+            "displayOrder": 1,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 5,
+            "level": 5,
+            "info": null
+        },
+        "percent": 20
+    },
+    {
+        "id": 23,
+        "investmentCategory": {
+            "id": 4,
+            "name": "Mid Cap",
+            "displayOrder": 2,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 5,
+            "level": 5,
+            "info": null
+        },
+        "percent": 20
+    },
+    {
+        "id": 24,
+        "investmentCategory": {
+            "id": 5,
+            "name": "Foreign",
+            "displayOrder": 3,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 5,
+            "level": 5,
+            "info": null
+        },
+        "percent": 20
+    },
+    {
+        "id": 25,
+        "investmentCategory": {
+            "id": 6,
+            "name": "Small Cap",
+            "displayOrder": 4,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 5,
+            "level": 5,
+            "info": null
+        },
+        "percent": 0
+    },
+    {
+        "id": 26,
+        "investmentCategory": {
+            "id": 2,
+            "name": "Bonds",
+            "displayOrder": 0,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 6,
+            "level": 6,
+            "info": null
+        },
+        "percent": 35
+    },
+    {
+        "id": 27,
+        "investmentCategory": {
+            "id": 3,
+            "name": "Large Cap",
+            "displayOrder": 1,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 6,
+            "level": 6,
+            "info": null
+        },
+        "percent": 25
+    },
+    {
+        "id": 28,
+        "investmentCategory": {
+            "id": 4,
+            "name": "Mid Cap",
+            "displayOrder": 2,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 6,
+            "level": 6,
+            "info": null
+        },
+        "percent": 5
+    },
+    {
+        "id": 29,
+        "investmentCategory": {
+            "id": 5,
+            "name": "Foreign",
+            "displayOrder": 3,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 6,
+            "level": 6,
+            "info": null
+        },
+        "percent": 30
+    },
+    {
+        "id": 30,
+        "investmentCategory": {
+            "id": 6,
+            "name": "Small Cap",
+            "displayOrder": 4,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 6,
+            "level": 6,
+            "info": null
+        },
+        "percent": 5
+    },
+    {
+        "id": 31,
+        "investmentCategory": {
+            "id": 2,
+            "name": "Bonds",
+            "displayOrder": 0,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 7,
+            "level": 7,
+            "info": null
+        },
+        "percent": 20
+    },
+    {
+        "id": 32,
+        "investmentCategory": {
+            "id": 3,
+            "name": "Large Cap",
+            "displayOrder": 1,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 7,
+            "level": 7,
+            "info": null
+        },
+        "percent": 25
+    },
+    {
+        "id": 33,
+        "investmentCategory": {
+            "id": 4,
+            "name": "Mid Cap",
+            "displayOrder": 2,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 7,
+            "level": 7,
+            "info": null
+        },
+        "percent": 25
+    },
+    {
+        "id": 34,
+        "investmentCategory": {
+            "id": 5,
+            "name": "Foreign",
+            "displayOrder": 3,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 7,
+            "level": 7,
+            "info": null
+        },
+        "percent": 25
+    },
+    {
+        "id": 35,
+        "investmentCategory": {
+            "id": 6,
+            "name": "Small Cap",
+            "displayOrder": 4,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 7,
+            "level": 7,
+            "info": null
+        },
+        "percent": 5
+    },
+    {
+        "id": 36,
+        "investmentCategory": {
+            "id": 2,
+            "name": "Bonds",
+            "displayOrder": 0,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 8,
+            "level": 8,
+            "info": null
+        },
+        "percent": 10
+    },
+    {
+        "id": 37,
+        "investmentCategory": {
+            "id": 3,
+            "name": "Large Cap",
+            "displayOrder": 1,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 8,
+            "level": 8,
+            "info": null
+        },
+        "percent": 20
+    },
+    {
+        "id": 38,
+        "investmentCategory": {
+            "id": 4,
+            "name": "Mid Cap",
+            "displayOrder": 2,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 8,
+            "level": 8,
+            "info": null
+        },
+        "percent": 40
+    },
+    {
+        "id": 39,
+        "investmentCategory": {
+            "id": 5,
+            "name": "Foreign",
+            "displayOrder": 3,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 8,
+            "level": 8,
+            "info": null
+        },
+        "percent": 20
+    },
+    {
+        "id": 40,
+        "investmentCategory": {
+            "id": 6,
+            "name": "Small Cap",
+            "displayOrder": 4,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 8,
+            "level": 8,
+            "info": null
+        },
+        "percent": 10
+    },
+    {
+        "id": 41,
+        "investmentCategory": {
+            "id": 2,
+            "name": "Bonds",
+            "displayOrder": 0,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 9,
+            "level": 9,
+            "info": null
+        },
+        "percent": 5
+    },
+    {
+        "id": 42,
+        "investmentCategory": {
+            "id": 3,
+            "name": "Large Cap",
+            "displayOrder": 1,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 9,
+            "level": 9,
+            "info": null
+        },
+        "percent": 15
+    },
+    {
+        "id": 43,
+        "investmentCategory": {
+            "id": 4,
+            "name": "Mid Cap",
+            "displayOrder": 2,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 9,
+            "level": 9,
+            "info": null
+        },
+        "percent": 40
+    },
+    {
+        "id": 44,
+        "investmentCategory": {
+            "id": 5,
+            "name": "Foreign",
+            "displayOrder": 3,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 9,
+            "level": 9,
+            "info": null
+        },
+        "percent": 25
+    },
+    {
+        "id": 45,
+        "investmentCategory": {
+            "id": 6,
+            "name": "Small Cap",
+            "displayOrder": 4,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 9,
+            "level": 9,
+            "info": null
+        },
+        "percent": 15
+    },
+    {
+        "id": 46,
+        "investmentCategory": {
+            "id": 2,
+            "name": "Bonds",
+            "displayOrder": 0,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 10,
+            "level": 10,
+            "info": null
+        },
+        "percent": 0
+    },
+    {
+        "id": 47,
+        "investmentCategory": {
+            "id": 3,
+            "name": "Large Cap",
+            "displayOrder": 1,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 10,
+            "level": 10,
+            "info": null
+        },
+        "percent": 5
+    },
+    {
+        "id": 48,
+        "investmentCategory": {
+            "id": 4,
+            "name": "Mid Cap",
+            "displayOrder": 2,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 10,
+            "level": 10,
+            "info": null
+        },
+        "percent": 25
+    },
+    {
+        "id": 49,
+        "investmentCategory": {
+            "id": 5,
+            "name": "Foreign",
+            "displayOrder": 3,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 10,
+            "level": 10,
+            "info": null
+        },
+        "percent": 30
+    },
+    {
+        "id": 50,
+        "investmentCategory": {
+            "id": 6,
+            "name": "Small Cap",
+            "displayOrder": 4,
+            "info": null
+        },
+        "investmentRisk": {
+            "id": 10,
+            "level": 10,
+            "info": null
+        },
+        "percent": 40
+    }
+]
+
+```
 
 #### 2. To get all the predefined portfolios as matrix/map (alternatively, this helps if UI prefers for an easy read):
 
@@ -105,6 +862,782 @@ curl -X GET \
   http://localhost:8080/api/v1/predefined/portfolios/matrix \
   -H 'Cache-Control: no-cache' \
   -H 'Client-Id: test1'
+```
+Response:
+```
+{
+    "1": [
+        {
+            "id": 1,
+            "investmentCategory": {
+                "id": 2,
+                "name": "Bonds",
+                "displayOrder": 0,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 1,
+                "level": 1,
+                "info": null
+            },
+            "percent": 80
+        },
+        {
+            "id": 2,
+            "investmentCategory": {
+                "id": 3,
+                "name": "Large Cap",
+                "displayOrder": 1,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 1,
+                "level": 1,
+                "info": null
+            },
+            "percent": 20
+        },
+        {
+            "id": 3,
+            "investmentCategory": {
+                "id": 4,
+                "name": "Mid Cap",
+                "displayOrder": 2,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 1,
+                "level": 1,
+                "info": null
+            },
+            "percent": 0
+        },
+        {
+            "id": 4,
+            "investmentCategory": {
+                "id": 5,
+                "name": "Foreign",
+                "displayOrder": 3,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 1,
+                "level": 1,
+                "info": null
+            },
+            "percent": 0
+        },
+        {
+            "id": 5,
+            "investmentCategory": {
+                "id": 6,
+                "name": "Small Cap",
+                "displayOrder": 4,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 1,
+                "level": 1,
+                "info": null
+            },
+            "percent": 0
+        }
+    ],
+    "2": [
+        {
+            "id": 6,
+            "investmentCategory": {
+                "id": 2,
+                "name": "Bonds",
+                "displayOrder": 0,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 2,
+                "level": 2,
+                "info": null
+            },
+            "percent": 70
+        },
+        {
+            "id": 7,
+            "investmentCategory": {
+                "id": 3,
+                "name": "Large Cap",
+                "displayOrder": 1,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 2,
+                "level": 2,
+                "info": null
+            },
+            "percent": 15
+        },
+        {
+            "id": 8,
+            "investmentCategory": {
+                "id": 4,
+                "name": "Mid Cap",
+                "displayOrder": 2,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 2,
+                "level": 2,
+                "info": null
+            },
+            "percent": 15
+        },
+        {
+            "id": 9,
+            "investmentCategory": {
+                "id": 5,
+                "name": "Foreign",
+                "displayOrder": 3,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 2,
+                "level": 2,
+                "info": null
+            },
+            "percent": 0
+        },
+        {
+            "id": 10,
+            "investmentCategory": {
+                "id": 6,
+                "name": "Small Cap",
+                "displayOrder": 4,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 2,
+                "level": 2,
+                "info": null
+            },
+            "percent": 0
+        }
+    ],
+    "3": [
+        {
+            "id": 11,
+            "investmentCategory": {
+                "id": 2,
+                "name": "Bonds",
+                "displayOrder": 0,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 3,
+                "level": 3,
+                "info": null
+            },
+            "percent": 60
+        },
+        {
+            "id": 12,
+            "investmentCategory": {
+                "id": 3,
+                "name": "Large Cap",
+                "displayOrder": 1,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 3,
+                "level": 3,
+                "info": null
+            },
+            "percent": 15
+        },
+        {
+            "id": 13,
+            "investmentCategory": {
+                "id": 4,
+                "name": "Mid Cap",
+                "displayOrder": 2,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 3,
+                "level": 3,
+                "info": null
+            },
+            "percent": 15
+        },
+        {
+            "id": 14,
+            "investmentCategory": {
+                "id": 5,
+                "name": "Foreign",
+                "displayOrder": 3,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 3,
+                "level": 3,
+                "info": null
+            },
+            "percent": 10
+        },
+        {
+            "id": 15,
+            "investmentCategory": {
+                "id": 6,
+                "name": "Small Cap",
+                "displayOrder": 4,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 3,
+                "level": 3,
+                "info": null
+            },
+            "percent": 0
+        }
+    ],
+    "4": [
+        {
+            "id": 16,
+            "investmentCategory": {
+                "id": 2,
+                "name": "Bonds",
+                "displayOrder": 0,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 4,
+                "level": 4,
+                "info": null
+            },
+            "percent": 50
+        },
+        {
+            "id": 17,
+            "investmentCategory": {
+                "id": 3,
+                "name": "Large Cap",
+                "displayOrder": 1,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 4,
+                "level": 4,
+                "info": null
+            },
+            "percent": 20
+        },
+        {
+            "id": 18,
+            "investmentCategory": {
+                "id": 4,
+                "name": "Mid Cap",
+                "displayOrder": 2,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 4,
+                "level": 4,
+                "info": null
+            },
+            "percent": 20
+        },
+        {
+            "id": 19,
+            "investmentCategory": {
+                "id": 5,
+                "name": "Foreign",
+                "displayOrder": 3,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 4,
+                "level": 4,
+                "info": null
+            },
+            "percent": 10
+        },
+        {
+            "id": 20,
+            "investmentCategory": {
+                "id": 6,
+                "name": "Small Cap",
+                "displayOrder": 4,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 4,
+                "level": 4,
+                "info": null
+            },
+            "percent": 0
+        }
+    ],
+    "5": [
+        {
+            "id": 21,
+            "investmentCategory": {
+                "id": 2,
+                "name": "Bonds",
+                "displayOrder": 0,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 5,
+                "level": 5,
+                "info": null
+            },
+            "percent": 40
+        },
+        {
+            "id": 22,
+            "investmentCategory": {
+                "id": 3,
+                "name": "Large Cap",
+                "displayOrder": 1,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 5,
+                "level": 5,
+                "info": null
+            },
+            "percent": 20
+        },
+        {
+            "id": 23,
+            "investmentCategory": {
+                "id": 4,
+                "name": "Mid Cap",
+                "displayOrder": 2,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 5,
+                "level": 5,
+                "info": null
+            },
+            "percent": 20
+        },
+        {
+            "id": 24,
+            "investmentCategory": {
+                "id": 5,
+                "name": "Foreign",
+                "displayOrder": 3,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 5,
+                "level": 5,
+                "info": null
+            },
+            "percent": 20
+        },
+        {
+            "id": 25,
+            "investmentCategory": {
+                "id": 6,
+                "name": "Small Cap",
+                "displayOrder": 4,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 5,
+                "level": 5,
+                "info": null
+            },
+            "percent": 0
+        }
+    ],
+    "6": [
+        {
+            "id": 26,
+            "investmentCategory": {
+                "id": 2,
+                "name": "Bonds",
+                "displayOrder": 0,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 6,
+                "level": 6,
+                "info": null
+            },
+            "percent": 35
+        },
+        {
+            "id": 27,
+            "investmentCategory": {
+                "id": 3,
+                "name": "Large Cap",
+                "displayOrder": 1,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 6,
+                "level": 6,
+                "info": null
+            },
+            "percent": 25
+        },
+        {
+            "id": 28,
+            "investmentCategory": {
+                "id": 4,
+                "name": "Mid Cap",
+                "displayOrder": 2,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 6,
+                "level": 6,
+                "info": null
+            },
+            "percent": 5
+        },
+        {
+            "id": 29,
+            "investmentCategory": {
+                "id": 5,
+                "name": "Foreign",
+                "displayOrder": 3,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 6,
+                "level": 6,
+                "info": null
+            },
+            "percent": 30
+        },
+        {
+            "id": 30,
+            "investmentCategory": {
+                "id": 6,
+                "name": "Small Cap",
+                "displayOrder": 4,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 6,
+                "level": 6,
+                "info": null
+            },
+            "percent": 5
+        }
+    ],
+    "7": [
+        {
+            "id": 31,
+            "investmentCategory": {
+                "id": 2,
+                "name": "Bonds",
+                "displayOrder": 0,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 7,
+                "level": 7,
+                "info": null
+            },
+            "percent": 20
+        },
+        {
+            "id": 32,
+            "investmentCategory": {
+                "id": 3,
+                "name": "Large Cap",
+                "displayOrder": 1,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 7,
+                "level": 7,
+                "info": null
+            },
+            "percent": 25
+        },
+        {
+            "id": 33,
+            "investmentCategory": {
+                "id": 4,
+                "name": "Mid Cap",
+                "displayOrder": 2,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 7,
+                "level": 7,
+                "info": null
+            },
+            "percent": 25
+        },
+        {
+            "id": 34,
+            "investmentCategory": {
+                "id": 5,
+                "name": "Foreign",
+                "displayOrder": 3,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 7,
+                "level": 7,
+                "info": null
+            },
+            "percent": 25
+        },
+        {
+            "id": 35,
+            "investmentCategory": {
+                "id": 6,
+                "name": "Small Cap",
+                "displayOrder": 4,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 7,
+                "level": 7,
+                "info": null
+            },
+            "percent": 5
+        }
+    ],
+    "8": [
+        {
+            "id": 36,
+            "investmentCategory": {
+                "id": 2,
+                "name": "Bonds",
+                "displayOrder": 0,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 8,
+                "level": 8,
+                "info": null
+            },
+            "percent": 10
+        },
+        {
+            "id": 37,
+            "investmentCategory": {
+                "id": 3,
+                "name": "Large Cap",
+                "displayOrder": 1,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 8,
+                "level": 8,
+                "info": null
+            },
+            "percent": 20
+        },
+        {
+            "id": 38,
+            "investmentCategory": {
+                "id": 4,
+                "name": "Mid Cap",
+                "displayOrder": 2,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 8,
+                "level": 8,
+                "info": null
+            },
+            "percent": 40
+        },
+        {
+            "id": 39,
+            "investmentCategory": {
+                "id": 5,
+                "name": "Foreign",
+                "displayOrder": 3,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 8,
+                "level": 8,
+                "info": null
+            },
+            "percent": 20
+        },
+        {
+            "id": 40,
+            "investmentCategory": {
+                "id": 6,
+                "name": "Small Cap",
+                "displayOrder": 4,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 8,
+                "level": 8,
+                "info": null
+            },
+            "percent": 10
+        }
+    ],
+    "9": [
+        {
+            "id": 41,
+            "investmentCategory": {
+                "id": 2,
+                "name": "Bonds",
+                "displayOrder": 0,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 9,
+                "level": 9,
+                "info": null
+            },
+            "percent": 5
+        },
+        {
+            "id": 42,
+            "investmentCategory": {
+                "id": 3,
+                "name": "Large Cap",
+                "displayOrder": 1,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 9,
+                "level": 9,
+                "info": null
+            },
+            "percent": 15
+        },
+        {
+            "id": 43,
+            "investmentCategory": {
+                "id": 4,
+                "name": "Mid Cap",
+                "displayOrder": 2,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 9,
+                "level": 9,
+                "info": null
+            },
+            "percent": 40
+        },
+        {
+            "id": 44,
+            "investmentCategory": {
+                "id": 5,
+                "name": "Foreign",
+                "displayOrder": 3,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 9,
+                "level": 9,
+                "info": null
+            },
+            "percent": 25
+        },
+        {
+            "id": 45,
+            "investmentCategory": {
+                "id": 6,
+                "name": "Small Cap",
+                "displayOrder": 4,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 9,
+                "level": 9,
+                "info": null
+            },
+            "percent": 15
+        }
+    ],
+    "10": [
+        {
+            "id": 46,
+            "investmentCategory": {
+                "id": 2,
+                "name": "Bonds",
+                "displayOrder": 0,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 10,
+                "level": 10,
+                "info": null
+            },
+            "percent": 0
+        },
+        {
+            "id": 47,
+            "investmentCategory": {
+                "id": 3,
+                "name": "Large Cap",
+                "displayOrder": 1,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 10,
+                "level": 10,
+                "info": null
+            },
+            "percent": 5
+        },
+        {
+            "id": 48,
+            "investmentCategory": {
+                "id": 4,
+                "name": "Mid Cap",
+                "displayOrder": 2,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 10,
+                "level": 10,
+                "info": null
+            },
+            "percent": 25
+        },
+        {
+            "id": 49,
+            "investmentCategory": {
+                "id": 5,
+                "name": "Foreign",
+                "displayOrder": 3,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 10,
+                "level": 10,
+                "info": null
+            },
+            "percent": 30
+        },
+        {
+            "id": 50,
+            "investmentCategory": {
+                "id": 6,
+                "name": "Small Cap",
+                "displayOrder": 4,
+                "info": null
+            },
+            "investmentRisk": {
+                "id": 10,
+                "level": 10,
+                "info": null
+            },
+            "percent": 40
+        }
+    ]
+}
+
 ```
 
 #### 3. To save predefined portfolios:
