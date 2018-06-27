@@ -154,7 +154,7 @@ java -Dspring.profiles.active=local -jar ./target/recs-0.0.1-SNAPSHOT.jar
 
 mvn spring-boot:run -Dspring-boot.run.profiles=local
 ```
-### Endpoints: (for live api end points are avialable here https://intense-oasis-48244.herokuapp.com )
+### Endpoints: (live api end points are available here -> https://intense-oasis-48244.herokuapp.com )
 ------------
 #### Note: All the requests expect Client-Id in header to distinguish the clients and is used in ```RecsClientRateLimitInterceptor``` to control concurrent requests on two unique clients. More than two concurrent client requests result in HTTP 429 Too Many Requests response status code.
 
