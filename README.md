@@ -17,6 +17,31 @@ SpringBootTest
 
 A new LOOKUP.INVESTMENT_CATEGORY or LOOKUP.INVESTMENT_RISK  record can be added to the database independent of the records RECOMMEND.PREDEFINED_PORTFOLIO  table, but a validation takes place during the updates or save into RECOMMEND.PREDEFINED_PORTFOLIO  table to make sure the percents sums up to 100.
 
+#### Note: All the requests expect Client-Id in header to distinguish the clients.
+
+The below seed data is populated at app startup:
+
+String[] investmentCategories = {"Bonds", "Large Cap", "Mid Cap", "Foreign", "Small Cap"};
+
+List<Integer> InvesmentRiskLevelSeed() {
+    return Stream.iterate(1, n -> n + 1).limit(10).collect(toList());
+}
+
+private List<?>[] getInvestmentRiskCategoryPercentMatrixSeed() {
+	List<?>[] riskCategoryPercentMatrix = {
+		Arrays.asList(80, 20, 0, 0, 0),
+		Arrays.asList(70, 15, 15, 0, 0),
+		Arrays.asList(60, 15, 15, 10, 0),
+		Arrays.asList(50, 20, 20, 10, 0),
+		Arrays.asList(40, 20, 20, 20, 0),
+		Arrays.asList(35, 25, 5, 30, 5),
+		Arrays.asList(20, 25, 25, 25, 5),
+		Arrays.asList(10, 20, 40, 20, 10),
+		Arrays.asList(5, 15, 40, 25, 15),
+		Arrays.asList(0, 5, 25, 30, 40)
+	};
+	return riskCategoryPercentMatrix;
+}
 
 Included: Features like audit fields, logging, Global Exception handler, RateLimiter, Restricting to up to 2 concurrent unique clients etc
  
@@ -61,6 +86,7 @@ mvn spring-boot:run -Dspring-boot.run.profiles=local
 
 ### Endpoints: (for live api end points are avialable here https://intense-oasis-48244.herokuapp.com )
 ------------
+#### Note: All the requests expect Client-Id in header to distinguish the clients.
 
 1. To get all the predefined portfolios as list:
 
