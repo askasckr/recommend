@@ -21,12 +21,13 @@ SpringBootTest
 
 - The below **seed data** is populated at app startup (look at ``` SeedDataService ```):
 ```
+// 5 categories
 String[] investmentCategories = {"Bonds", "Large Cap", "Mid Cap", "Foreign", "Small Cap"};
-
+// 10 risk levels
 List<Integer> InvesmentRiskLevelSeed() {
     return Stream.iterate(1, n -> n + 1).limit(10).collect(toList());
 }
-
+//category vs risk percent values
 private List<?>[] getInvestmentRiskCategoryPercentMatrixSeed() {
 	List<?>[] riskCategoryPercentMatrix = {
 		Arrays.asList(80, 20, 0, 0, 0),
