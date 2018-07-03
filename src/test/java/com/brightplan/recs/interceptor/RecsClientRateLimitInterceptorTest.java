@@ -103,8 +103,8 @@ public class RecsClientRateLimitInterceptorTest {
             .collect(Collectors.toList());
 
     long duration = (System.nanoTime() - start) / 1_000_000;
-    System.out.printf("Processed %d tasks in %d millis\n", clients.size(), duration);
-    System.out.println(result);
+    //System.out.printf("Processed %d tasks in %d millis\n", clients.size(), duration);
+    //System.out.println(result);
     executor.shutdown();
 
     // Count the number of requests returned atleast one has status code 409
