@@ -65,7 +65,8 @@ public class PredefinedPortfolioService {
   public List<PredefinedPortfolioPercent> savePredefinedPortfolioPercents(
       List<PredefinedPortfolioPercent> predefinedPortfolioPercents) {
     List<PredefinedPortfolioPercent> predefinedPortfolioPercentsSaved = predefinedPortfolioPercentRepository
-        .saveAll(predefinedPortfolioValidation.performPercentsSumUpTo100AndReturnMergedList(predefinedPortfolioPercents));
+        .saveAll(predefinedPortfolioValidation
+            .performPercentsSumUpTo100AndReturnMergedList(predefinedPortfolioPercents));
     return predefinedPortfolioPercentsSaved;
   }
 

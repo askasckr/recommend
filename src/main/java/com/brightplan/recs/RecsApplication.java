@@ -45,7 +45,8 @@ public class RecsApplication implements CommandLineRunner {
 
   public void run(String... args) throws Exception {
     List<String> activeProfiles = Arrays.asList(env.getActiveProfiles());
-    if (isEmpty(activeProfiles) || activeProfiles.contains("localIntTest") || activeProfiles.contains("local")) {
+    if (isEmpty(activeProfiles) || activeProfiles.contains("localIntTest") || activeProfiles
+        .contains("local")) {
       // Cleanup all data
       seedDataService.cleanUp();
       // Save the seed data for Investment Risk and PredefinedPortfolios

@@ -12,7 +12,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.google.common.base.Functions;
 import java.util.List;
 import java.util.Map;
-import java.util.function.Predicate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -95,7 +94,7 @@ public class PredefinedPortfolioPercent extends RecsAuditableEntity {
   }
 
   private void merge(PredefinedPortfolioPercent predefinedPortfolioPercent) {
-    if(nonNull(predefinedPortfolioPercent)) {
+    if (nonNull(predefinedPortfolioPercent)) {
       this.percent = predefinedPortfolioPercent.getPercent();
     }
   }
