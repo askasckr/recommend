@@ -28,39 +28,42 @@ public class PredefinedPortfolioValidation {
         .collect(groupingBy(p -> new SimpleEntry<>(p.getInvestmentRisk().getId(),
             p.getInvestmentRisk().getLevel())))
         .entrySet().stream().map(
-        r -> {
-          List<PredefinedPortfolioPercent> suppliedPercents = r.getValue();
-          // 1. Check the sum of percents within supplied list
-          double sumOfSuppliedPercents = suppliedPercents.stream()
-              .mapToDouble(PredefinedPortfolioPercent::getPercent)
-              .sum();
-          if (DOUBLE_100 != sumOfSuppliedPercents) {
-            throw new RecsException(HttpStatus.BAD_REQUEST, String
-                .format(
-                    "Supplied Percents for Risk(id = %d, level = %d) ARE NOT summing up to 100: (%s) = %.2f",
-                    r.getKey().getKey(), r.getKey().getValue(),
-                    predefinedPortfolioPercents.stream().map(pp -> String.valueOf(pp.getPercent()))
-                        .collect(joining(" + ")), sumOfSuppliedPercents));
-          }
-          // Get the merged list from existing and suppliedPercents
-          List<PredefinedPortfolioPercent> mergedPercents = PredefinedPortfolioPercent.mergeLists(
-              predefinedPortfolioPercentRepository
-                  .findPredefinedPortfolioPercentByInvestmentRisk_Id(r.getKey().getKey()),
-              suppliedPercents);
-          // 1. Check the sum of percents within supplied list
-          double sumOfMergedPercents = mergedPercents.stream()
-              .mapToDouble(PredefinedPortfolioPercent::getPercent)
-              .sum();
-          if (DOUBLE_100 != sumOfMergedPercents) {
-            throw new RecsException(HttpStatus.BAD_REQUEST, String
-                .format(
-                    "Merged Percents for Risk(id = %d, level = %d) ARE NOT summing up to 100: (%s) = %.2f",
-                    r.getKey().getKey(), r.getKey().getValue(),
-                    predefinedPortfolioPercents.stream().map(pp -> String.valueOf(pp.getPercent()))
-                        .collect(joining(" + ")), sumOfMergedPercents));
-          }
-          return mergedPercents;
-        }).flatMap(List::stream).collect(Collectors.toList());
+            r -> {
+              List<PredefinedPortfolioPercent> suppliedPercents = r.getValue();
+              // 1. Check the sum of percents within supplied list
+              double sumOfSuppliedPercents = suppliedPercents.stream()
+                  .mapToDouble(PredefinedPortfolioPercent::getPercent)
+                  .sum();
+              if (DOUBLE_100 != sumOfSuppliedPercents) {
+                throw new RecsException(HttpStatus.BAD_REQUEST, String
+                    .format(
+                        "Supplied Percents for Risk(id = %d, level = %d) ARE NOT summing up to 100: (%s) = %.2f",
+                        r.getKey().getKey(), r.getKey().getValue(),
+                        predefinedPortfolioPercents.stream()
+                            .map(pp -> String.valueOf(pp.getPercent()))
+                            .collect(joining(" + ")), sumOfSuppliedPercents));
+              }
+              // Get the merged list from existing and suppliedPercents
+              List<PredefinedPortfolioPercent> mergedPercents = PredefinedPortfolioPercent
+                  .mergeLists(
+                      predefinedPortfolioPercentRepository
+                          .findPredefinedPortfolioPercentByInvestmentRisk_Id(r.getKey().getKey()),
+                      suppliedPercents);
+              // 1. Check the sum of percents within supplied list
+              double sumOfMergedPercents = mergedPercents.stream()
+                  .mapToDouble(PredefinedPortfolioPercent::getPercent)
+                  .sum();
+              if (DOUBLE_100 != sumOfMergedPercents) {
+                throw new RecsException(HttpStatus.BAD_REQUEST, String
+                    .format(
+                        "Merged Percents for Risk(id = %d, level = %d) ARE NOT summing up to 100: (%s) = %.2f",
+                        r.getKey().getKey(), r.getKey().getValue(),
+                        predefinedPortfolioPercents.stream()
+                            .map(pp -> String.valueOf(pp.getPercent()))
+                            .collect(joining(" + ")), sumOfMergedPercents));
+              }
+              return mergedPercents;
+            }).flatMap(List::stream).collect(Collectors.toList());
   }
 
   //  public static boolean missingCategoryPercentsCheck(
